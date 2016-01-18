@@ -27,7 +27,7 @@ An LED ring that shows the four main readings from the netatmo so everyone in th
 
 * The python script handles talking to the Netatmo API, getting the values and deciding which colour to use for which values
   * The colours are what I have set for a New Zealand climate - your values may be different
-  * The values are sent over serial
+  * The instructions are sent over serial. For the above image you would send: `0:blue;` `1:green;` `2:green` `3:orange` as 4 different Serial instructions.
 
 ##Limitations##
 
