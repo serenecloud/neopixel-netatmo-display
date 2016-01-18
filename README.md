@@ -23,11 +23,14 @@ An LED ring that shows the four main readings from the netatmo so everyone in th
 ## How it works ##
 
 * The neopixel has 16 LEDs, which I think of as 4 quarters with 4 pixels each
-** The code for the Arduino accepts Serials commands that tell it what colour to set each quarter a colour in the format `QUARTER_NUMBER:COLOUR;`. e.g. `0:green;`, `3:red;`
+  * The code for the Arduino accepts Serial commands that tell it what colour to set each quarter a colour in the format `QUARTER_NUMBER:COLOUR;`. e.g. `0:green;`, `3:red;`
 
 * The python script handles talking to the Netatmo API, getting the values and deciding which colour to use for which values
-** The colours are what I have set for a New Zealand climate - your values may be different
+  * The colours are what I have set for a New Zealand climate - your values may be different
+  * The values are sent over serial
 
 ##Limitations##
 
 This code is not particularly elegant, but it's working. If you want to pursue your own project I encourage you to take the code, improve it and share it. I'll happily see what others create based on this.
+
+The netatmo takes regular readings, but it only sends them to the API every 10 minutes, so I only poll every 10 minutes.
